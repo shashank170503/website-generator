@@ -1,79 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Free Website Generator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background: #f4f4f4;
-    }
-
-    .container {
-      max-width: 600px;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background: black;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    .preview {
-      margin-top: 40px;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      display: none;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Website Generator</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<div class="container">
-  <h2>Create Your Business Website</h2>
+  <nav>
+    <h2>Website Generator</h2>
+  </nav>
 
-  <input type="text" id="name" placeholder="Business Name">
-  <textarea id="desc" placeholder="Business Description"></textarea>
-  <input type="email" id="email" placeholder="Contact Email">
+  <section class="hero">
+    <h1>Create Your Business Website</h1>
+    <p>Enter details and generate instant website preview</p>
+  </section>
 
-  <button onclick="generate()">Generate Website</button>
-</div>
+  <section class="form-section">
+    <input type="text" id="name" placeholder="Business Name">
+    <textarea id="desc" placeholder="Business Description"></textarea>
+    <input type="email" id="email" placeholder="Contact Email">
+    <button onclick="generate()">Generate Website</button>
+  </section>
 
-<div class="preview" id="preview">
-  <h1 id="pname"></h1>
-  <p id="pdesc"></p>
-  <p><b>Contact:</b> <span id="pemail"></span></p>
-</div>
+  <section class="preview" id="preview">
+    <h1 id="pname"></h1>
+    <p id="pdesc"></p>
+    <p><b>Contact:</b> <span id="pemail"></span></p>
+  </section>
 
-<script>
-function generate() {
-  document.getElementById("pname").innerText =
-    document.getElementById("name").value;
+  <footer>
+    <p>© 2026 Website Generator</p>
+  </footer>
 
-  document.getElementById("pdesc").innerText =
-    document.getElementById("desc").value;
-
-  document.getElementById("pemail").innerText =
-    document.getElementById("email").value;
-
-  document.getElementById("preview").style.display = "block";
-}
-</script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
